@@ -16,6 +16,7 @@ const Footer=()=>{
             <div>
                 Phone Number
             </div>
+            
             </div>
             
 

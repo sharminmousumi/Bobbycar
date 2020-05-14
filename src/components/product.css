@@ -1,0 +1,17 @@
+.products {
+	display: grid;
+	grid-template-columns: auto auto auto;
+  grid-gap: 2em;
+  padding: 2em;
+}
+.products > div {
+ border:5px solid gray;
+ background-color: indigo;
+ color:whitesmoke;
+ 
+}
+.but{
+  background-color: green;
+  color:whitesmoke;
+}
+
