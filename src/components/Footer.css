@@ -1,13 +1,29 @@
 .footer{
     width:100%;
   position: fixed;
-  padding:0.3em;
+  padding:0.1em;
   background-color:rebeccapurple;
   text-align:center;
   bottom:0;
   text-align:left;
   color:honeydew;
-  
-  
+  display:grid;
+  grid-template-columns: auto auto;
  
+  
+   
 }
+.img > img{
+  
+  width: 10%;
+  height: auto;
+  text-align: right;
+  margin-left: 1100px;
+  margin-top: 12px;
+  
+  
+
+}
+.text > p{
+  font-size: small;
+} 
