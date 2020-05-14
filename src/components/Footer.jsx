@@ -17,6 +17,7 @@ const Footer=()=>{
             </div>
             
             <div className="img">
+                <p>Follow us on social media</p>
                 <img src={img} alt="uh"/>
             </div>
             

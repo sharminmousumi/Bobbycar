@@ -25,5 +25,15 @@
 
 }
 .text > p{
-  font-size: small;
+  font-size: 12px;
 } 
+.img > p{
+  
+ 
+  text-align: right;
+  margin-right: 80px;
+  font-size: 9px;
+  
+  
+
+}
