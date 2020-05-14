@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-const Header=()=>{
+const Header=({setShow,sendNav})=>{
 
 
 
@@ -10,15 +10,13 @@ const Header=()=>{
         <header>
             <h1>Bobby Car</h1>
             <div className="item">
-            <div className="shop">
+            <div onClick={()=>setShow(sendNav.showproduct)} className="shop">
                 <h2>Product-List</h2>
                 
-                <div className="contact" >
-                    <h2>Contact</h2>
-                    </div>
+               
             </div>
           
-            <div>
+            <div onClick={()=>setShow(sendNav.showShoppingCart)}>
                 Shopping-Cart
             </div>
             </div>
