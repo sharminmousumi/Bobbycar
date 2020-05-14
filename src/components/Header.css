@@ -1,14 +1,14 @@
 header{
     background-color:rebeccapurple;
-	display: flex;
-	flex-direction: row;
+	  display: flex;
+	  flex-direction: row;
     justify-content: space-between;
     color: honeydew;
-    margin: 0.5em;
+    
   }
   .item{
       display: flex;
-      padding: 1em;
+      padding: 0.5em;
 	    margin: 0px;
   }
   header > h1 {
@@ -16,6 +16,11 @@ header{
 
 }
 .shop {
-	padding-right: 500px;
-	padding-top: 0.5em;
+	padding-right: 450px;
+  padding-top: 0.5em;
+  display: flex;
+}
+.contact{
+  
+margin-left: 40px;
 }

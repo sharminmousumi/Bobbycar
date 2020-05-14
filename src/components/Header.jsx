@@ -11,8 +11,13 @@ const Header=()=>{
             <h1>Bobby Car</h1>
             <div className="item">
             <div className="shop">
-                Product-List
+                <h2>Product-List</h2>
+                
+                <div className="contact" >
+                    <h2>Contact</h2>
+                    </div>
             </div>
+          
             <div>
                 Shopping-Cart
             </div>
