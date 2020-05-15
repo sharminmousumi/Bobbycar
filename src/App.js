@@ -9,7 +9,7 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
   const showproduct='product' , showShoppingCart='ShoppingCart';
   const [show,setShow]=useState(showproduct);
-  let Body= null;
+  let Body= 0;
   if(show===showproduct){
      Body=<Product/>
   }else{
