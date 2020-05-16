@@ -27,6 +27,7 @@ const Product = () => {
         const data = productList.map((item)=> {
             if(sort.length !== 0) {
                 if (item.name.toUpperCase().match(sort.toUpperCase())
+                ||(item.price.toString().match(sort.toString()))
                 
                 ) {
              return <div  key={item.name}> 
