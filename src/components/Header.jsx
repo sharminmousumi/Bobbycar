@@ -8,18 +8,21 @@ const Header=({setShow,sendNav})=>{
 
     return(
         <header>
-            <h1>Bobby Car</h1>
-            <div className="item">
-            <div onClick={()=>setShow(sendNav.showproduct)} className="shop">
-                <h2>Product-List</h2>
-                
-               
-            </div>
+            <ul className="item">
+                <li onClick={()=>setShow(sendNav.showproduct)}>
+                    Shop
+                </li>
+                <li>
+                    <img className="bobbyIcon" src="img/bobbybuilder3.png" alt="Bobby Builder" />
+                </li>
+                <li onClick={()=>setShow(sendNav.showShoppingCart)}>
+                <img className="shopIcon" src="img/Shopping-Cart-icon.png" alt="cart" />
+                </li>
+            </ul>
+            
           
-            <div onClick={()=>setShow(sendNav.showShoppingCart)}>
-                Shopping-Cart
-            </div>
-            </div>
+            
+            
 
         </header>
     )
