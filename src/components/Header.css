@@ -1,29 +1,28 @@
 header{
-    background-color:rebeccapurple;
-	  display: flex;
-	  flex-direction: row;
-    justify-content: space-between;
-    color: honeydew;
-    
+    background-color: #efefef;
+    color: #3d3d3d;
+    height: 80px;
   }
   .item{
-      display: flex;
-      padding: 0.5em;
-	    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px;
+    font-size: 2em;
+    font-weight: 300;
+    list-style: none;
   }
-  header > h1 {
-	margin-left: 100px;
+.item > li:last-child{
+  margin-right: 1em;
+}
+.bobbyIcon{
+  height: 80px;
+}
 
+.shopIcon{
+  height: 40px;
 }
-.shop {
-	padding-right: 450px;
-  padding-top: 0.5em;
-  display: flex;
-}
-.contact{
-  
-margin-left: 40px;
-}
+
 .Cartlogo >img{
   width: 40px;
   height: 25px;

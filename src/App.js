@@ -3,8 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Product from './components/Product';
-import Cart from "./components/Cart";
-//import ShoppingCart from './components/ShoppingCart';
+import ShoppingCart from './components/ShoppingCart';
 
 
 
@@ -17,10 +16,11 @@ function App() {
   if (show === showproduct) {
     Body = <Product />
   } else {
-    Body = <Cart />
+    Body = <ShoppingCart />
   }
   return (
     <div className="App">
+
       <Header setShow={setShow} sendNav={{ showproduct, showShoppingCart }} />
       <main>
         {Body}
