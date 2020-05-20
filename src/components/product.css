@@ -1,13 +1,17 @@
 .products {
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: auto auto auto auto;
   grid-gap: 1em;
   padding: 1em;
+  margin-top: 10px;
+ 
 }
 .products > div {
- border:5px solid gray;
- background-color: indigo;
+ /* border:1px solid gray; */
+ /* background-color: indigo; */
  color:whitesmoke;
+ /* background-image: './images/447265.jpeg'; */
+
  
 }
 .but{
@@ -15,13 +19,37 @@
   color:whitesmoke;
 }
 .SearchProduct{
-  padding: 10px;
+  padding: 5px;
   font-size: 17px;
   border: 1px solid grey;
   float: center;
-  width: 50%;
+  width: 15%;
+  border-radius: 5px;
   background: whitesmoke;
-  margin-top: 10px;
+  margin-top: 550px;
+  margin-left: 100px;
   
 }
+.grid-item{
+  /* background-image:URI(images/447265.jpeg);  */
+  /* background-color: red;  */
+  opacity: 0.8; 
+  color: black;
+
+
+}
+
+.search{
+  font-size: 4vw;
+  text-align: left ;
+  margin-left: 70px;
+  /* position:absolute; */
+  
+}
+
+.model{
+  font-weight: bold;
+}
+
+
 

@@ -1,6 +1,9 @@
 body{
   background-image: url("./images/background.jpg");
-}.App {
+  background-repeat: no-repeat;
+  
+}
+.App {
   text-align: center;
 }
 
@@ -38,3 +41,31 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.bottom-right{
+  position:absolute;
+  top: 70%;
+  left: 75%;
+  transform: translate(-50%, -50%); 
+  font-weight: bolder;
+  font-size:2.1vw;
+  color: white;
+  
+  
+}
+
+ .text{
+  position:relative;
+  font-weight:normal;
+  font-size:1.5vw; 
+  display:block;
+  text-align: justify;
+  
+} 
+/* 
+#content1::after{
+  content: "\a";
+  white-space: pre;
+  font-weight:normal;
+  font-size:1.1vw;
+} */
