@@ -1,14 +1,10 @@
 body{
-<<<<<<< HEAD
   background-image: url("./images/background.jpg");
   background-repeat: no-repeat;
   
 }
 .App {
   text-align: center;
-=======
- 
->>>>>>> 976f8170f4bd4781a0097304d1890046bfd4e6d0
 }
 .App {
   min-height: 100vh;
@@ -33,7 +29,6 @@ footer{
   grid-area: footer;
 }
 
-<<<<<<< HEAD
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -70,5 +65,3 @@ footer{
   font-weight:normal;
   font-size:1.1vw;
 } */
-=======
->>>>>>> 976f8170f4bd4781a0097304d1890046bfd4e6d0

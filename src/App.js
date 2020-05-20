@@ -20,7 +20,6 @@ function App() {
   }
   return (
     <div className="App">
-<<<<<<< HEAD
      
      <Header setShow={setShow} sendNav={{showproduct,showShoppingCart}}/>
      <main className="main">
@@ -39,13 +38,6 @@ function App() {
     
      {Body}
       
-=======
-
-      <Header setShow={setShow} sendNav={{ showproduct, showShoppingCart }} />
-      <main>
-        {Body}
-
->>>>>>> 976f8170f4bd4781a0097304d1890046bfd4e6d0
       </main>
       <Footer />
     </div>
