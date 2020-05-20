@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './product.css';
-import img1 from '../images/447265.jpeg';
+
 
 
 
@@ -23,10 +23,11 @@ const Product = () => {
         ]
         
         
-        const [filter, setFilter]=useState("");
+        const [sort, setSort]=useState("");
         const data = productList.map((item)=> {
-            if(filter.length !== 0) {
-                if (item.name.toUpperCase().match(filter.toUpperCase())
+            if(sort.length !== 0) {
+                if (item.name.toUpperCase().match(sort.toUpperCase())
+                ||(item.price.toString().match(sort.toString()))
                 
                 ) {
              return <div  key={item.name}> 
@@ -46,15 +47,15 @@ const Product = () => {
             <div  className="grid-item">
             Model:{item.name}<br/>
             Price:{item.price} <br/>
-            <button className="but">Add to Shopping</button>
+            <button className="but" >Add to Shopping</button>
             
             </div>
              </div>
             
         })
     return (
-        <div>
-            <input className="SearchProduct" type="text" placeholder="search..." value={filter} onChange={(event) => setFilter(event.target.value)} />
+        <div className="search">
+            <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
             <div className="products">
                 
             {data}

@@ -18,6 +18,12 @@ header{
 .bobbyIcon{
   height: 80px;
 }
+
 .shopIcon{
   height: 40px;
+}
+
+.Cartlogo >img{
+  width: 40px;
+  height: 25px;
 }
