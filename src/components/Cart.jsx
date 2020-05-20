@@ -1,63 +1,36 @@
 import React from 'react';
 import "./Cart.css";
+import { useDispatch, useSelector } from 'react-redux';
+import { actions } from '../features/cart';
 
 const Cart = () => {
-    let fakeData = [
-        {
-            model: "Bobbycar V2.0",
-            color: "Blue",
-            count: 1,
-            price: 500,
-            img: "https://i.imgur.com/thkn6UK.png"
-        },
-        {
-            model: "Leeroy Jenkins",
-            color: "red",
-            count: 1,
-            price: 1200,
-            img: "https://i.imgur.com/thkn6UK.png"
-        },
-        {
-            model: "Leeroy Jenkins",
-            color: "red",
-            count: 1,
-            price: 1200,
-            img: "https://i.imgur.com/thkn6UK.png"
-        },
-        {
-            model: "Leeroy Jenkins",
-            color: "red",
-            count: 1,
-            price: 1200,
-            img: "https://i.imgur.com/thkn6UK.png"
-        },
-        {
-            model: "Leeroy Jenkins",
-            color: "red",
-            count: 1,
-            price: 1200,
-            img: "https://i.imgur.com/thkn6UK.png"
-        }
-
-    ]
+    const dispatch = useDispatch();
+    const data = useSelector(state => state.cart);
+    let sum = 0;
+    data.forEach(cartItem => { sum += cartItem.product.price * cartItem.count });
 
 
-    let productsInCart = fakeData.map(product => {
+
+
+    let productsInCart = data.map(item => {
         return (
-            <div key={product.model} className="cart product-container">
-                <p className="cart-product">{product.model}</p>
-                <div>
-                    <button className="increase">-</button>
-                    <p className="cart-product count">{product.count}</p>
-                    <button className="decrease">+</button>
+            <div key={item.product.name}>
+                <div className="cart product-container">
+                    <p className="cart-product">{item.product.name}</p>
+                    <div>
+                        <button className="decrease"
+                            onClick={() => dispatch(actions.decreaseAmount(item.product.name))}
+                            disabled={item.count === 0}
+                        >-</button>
+                        <p className="cart-product count">{item.count}</p>
+                        <button className="increase" onClick={() => dispatch(actions.increaseAmount(item.product.name))}>+</button>
+                    </div>
+                    <p className="cart-product">{item.product.price} kr</p>
+                    <button className="delete-button" onClick={() => dispatch(actions.removeFromCart(item.product.name))}>X</button>
                 </div>
-                <p className="cart-product">{product.price} kr</p>
             </div>
         )
     })
-
-
-
     return (
         <>
             <div className="cart">
@@ -67,6 +40,7 @@ const Cart = () => {
                     <h4>Price</h4>
                 </div>
                 {productsInCart}
+                <p>Total: {sum} kr</p>
             </div>
         </>
     )
@@ -74,7 +48,5 @@ const Cart = () => {
 
 
 }
-
-
 
 export default Cart;
