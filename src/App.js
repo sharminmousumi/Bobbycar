@@ -18,12 +18,12 @@ function App() {
   return (
     <div className="App">
      
-     <Header setShow={setShow} sendNav={{showproduct,showShoppingCart}}/>
-     <main>
-     {Body}
-      
-      </main>
-     <Footer/>
+        <Header setShow={setShow} sendNav={{showproduct,showShoppingCart}}/>
+        <main>
+        {Body}
+          
+          </main>
+        <Footer/>
     </div>
   );
 }
