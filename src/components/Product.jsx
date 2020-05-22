@@ -19,6 +19,7 @@ const Product = () => {
         {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
       
         ]
+       
         
         
         const [sort, setSort]=useState("");
@@ -50,17 +51,17 @@ const Product = () => {
             Price:{item.price} <br/>
             <div className="image">
             {item.im} 
+            
             </div>
-           
+            
             
             </div>
              </div>
             
         })
     return (
-        <div>
+        <div className="container2">
         <div className="container1">
-
             <img className="backgroundimg"   src={images} alt="background"/>
             <div className="bottom-right">
                 <h1>Köp din bobby car online</h1>
