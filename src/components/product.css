@@ -9,10 +9,12 @@
 
 }
 .products {
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 5px;
   
+
  
 }
 /* Bigger than Phones(tablet) */
@@ -43,6 +45,7 @@
 
 
 .SearchProduct{
+
   background-image: -webkit-linear-gradient(top, white 0%,white 100%);
   border-radius: 5px 5px 5px 5px;
   height: 32px;
@@ -62,6 +65,7 @@
 .search {
  display: grid;
  grid-template-columns: auto auto auto auto;
+
   
 }
 .search > p{
@@ -89,4 +93,6 @@
   grid-template-columns: auto;
   font-family:'Arial Narrow Bold', sans-serif;
 
+
 }
+

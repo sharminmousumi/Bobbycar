@@ -1,8 +1,11 @@
   
 import React from 'react';
 import './Header.css';
+import { useSelector } from 'react-redux';
+
 
 const Header=({setShow,sendNav})=>{
+
 
 
 
@@ -24,6 +27,7 @@ const Header=({setShow,sendNav})=>{
           
             
             
+
 
         </header>
     )

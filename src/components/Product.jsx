@@ -1,6 +1,9 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import './product.css';
+
 import images from '../images/background.jpg';
+
 
 
 
@@ -9,6 +12,7 @@ import images from '../images/background.jpg';
 const Product = () => {
     
     const productList=[
+
         {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
         {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
         {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
@@ -18,6 +22,7 @@ const Product = () => {
         {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
         {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
       
+
         ]
        
         
@@ -31,12 +36,14 @@ const Product = () => {
                 ) {
              return <div  key={item.name}> 
                     <div  className="grid-item">
+
                    {item.name}<br/>
                    {item.price} <br/>
                    <div className="image">
                     {item.im} 
                     </div>
                    
+
             </div>
             </div>
                 }
@@ -45,6 +52,7 @@ const Product = () => {
                 }
             }
           
+
     return  <div  key={item.name}> 
             <div  className="grid-item">
             Model:{item.name}<br/>
@@ -54,12 +62,15 @@ const Product = () => {
             
             </div>
             
+
             
-            </div>
-             </div>
+                            </div>
+                    </div>
+        
             
         })
     return (
+
         <div className="container2">
         <div className="container1">
             <img className="backgroundimg"   src={images} alt="background"/>
@@ -70,6 +81,7 @@ const Product = () => {
                 <p>Snabbast och säkrast</p>
             </div>
             </div>
+
             
                 <div className="container">
                     <div className="search">
@@ -80,8 +92,8 @@ const Product = () => {
                     {data}
                     </div>
             </div>
-            
-            
+
+
         </div>
     );
 };
