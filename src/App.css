@@ -1,9 +1,8 @@
 body{
-  background-image: url("./images/background.jpg"); 
-  background-repeat: no-repeat;
-  
-}
-.App {
+  background-color:#3D3D3D;
+}.App {
+
+ 
   text-align: center;
 }
 .App {

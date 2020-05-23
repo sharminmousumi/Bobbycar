@@ -1,55 +1,98 @@
+.container{
+  border:10px solid #EFEFEF;
+  background-color: #EFEFEF;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: auto;
+  
+  
+
+}
 .products {
-	display: grid;
-	grid-template-columns: auto auto auto auto;
-  grid-gap: 1em;
-  padding: 1em;
-  margin-top: 10px;
- 
-}
-.products > div {
- /* border:1px solid gray; */
- /* background-color: indigo; */
- color:whitesmoke;
- /* background-image: './images/447265.jpeg'; */
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  
 
  
 }
-.but{
-  background-color: green;
-  color:whitesmoke;
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 480px) and (max-width: 600px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .products{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 .SearchProduct{
-  padding: 5px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: center;
-  width: 15%;
-  border-radius: 5px;
-  background: whitesmoke;
-  margin-top: 550px;
-  margin-left: 100px;
-  
-}
-.grid-item{
-  /* background-image:URI(images/447265.jpeg);  */
-  /* background-color: red;  */
-  opacity: 0.8; 
-  color: black;
 
-
-}
-
-.search{
-  font-size: 4vw;
-  text-align: left ;
-  margin-left: 70px;
-  /* position:absolute; */
-  
-}
-
-.model{
+  background-image: -webkit-linear-gradient(top, white 0%,white 100%);
+  border-radius: 5px 5px 5px 5px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid #bbb;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px #fff;
+  text-shadow: 0px 1px #ccc;
   font-weight: bold;
+  
+}
+.backgroundimg{
+  width: 100%;
+  height: 150px;
+
+  
+}
+.search {
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+
+  
+}
+.search > p{
+  margin-top:5px;
+  
+}
+.container1 {
+  position: relative;
+  color: white;
+  font-size: 10px;
+  display: grid;
+  margin-right: 40px;
+  margin-left: 40px;
+  margin-bottom: 15px;
+	
 }
 
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 50px;
+}
+.container2{
+  display: grid;
+  grid-template-columns: auto;
+  font-family:'Arial Narrow Bold', sans-serif;
 
+
+}
 

@@ -21,25 +21,14 @@ function App() {
   return (
     <div className="App">
      
-     <Header setShow={setShow} sendNav={{showproduct,showShoppingCart}}/>
-     <main className="main">
-       <div>
-            <div className="bottom-right">Köp din Bobbycar online<br/>
-            {/* <div>
-            <span id="content1">Fri Frakt på allt</span><span id="content2">Livstids service</span>
-            
-            </div> */}
-            
-                       <div className="text"> Fri Frakt på allt <br/>
-                                              Livstids service<br/>
-                                              Snabbast och säkrast på marknade<br/></div> 
-                </div>
-      </div>
-    
-     {Body}
-      
-      </main>
-      <Footer />
+
+        <Header setShow={setShow} sendNav={{showproduct,showShoppingCart}}/>
+        <main>
+        {Body}
+          
+          </main>
+        <Footer/>
+
     </div>
   );
 }
