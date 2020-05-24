@@ -5,10 +5,9 @@ import { useSelector } from 'react-redux';
 
 
 const Header=({setShow,sendNav})=>{
-
-
-
-
+    const cart = useSelector(state => state.cart);
+    let count = 0;
+    cart.forEach(cartItem => { count += cartItem.count; });
 
     return(
         <header>
@@ -21,14 +20,9 @@ const Header=({setShow,sendNav})=>{
                 </li>
                 <li onClick={()=>setShow(sendNav.showShoppingCart)}>
                 <img className="shopIcon" src="img/Shopping-Cart-icon.png" alt="cart" />
+                <span>[{count}]</span>
                 </li>
             </ul>
-            
-          
-            
-            
-
-
         </header>
     )
 }

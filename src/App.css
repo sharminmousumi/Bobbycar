@@ -1,66 +1,23 @@
 body{
-  background-color:#3D3D3D;
-}.App {
-
- 
-  text-align: center;
+  background-color:#fefefe;
 }
 .App {
-  min-height: 100vh;
-  text-align: center;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-  "header"
-  "body"
-  "footer";
-}
-
-Header{
-  grid-area: header;
-}
-main{
-  grid-area: body;
-  background-image: url("./images/background.jpg");
-  
-}
-footer{
-  grid-area: footer;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+    min-height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer";
   }
-  to {
-    transform: rotate(360deg);
+  header{
+    grid-area: header;
   }
-}
 
-.bottom-right{
-  position:absolute;
-  top: 70%;
-  left: 75%;
-  transform: translate(-50%, -50%); 
-  font-weight: bolder;
-  font-size:2.1vw;
-  color: white;
-  
-  
-}
-
- .text{
-  position:relative;
-  font-weight:normal;
-  font-size:1.5vw; 
-  display:block;
-  text-align: justify;
-  
-} 
-/* 
-#content1::after{
-  content: "\a";
-  white-space: pre;
-  font-weight:normal;
-  font-size:1.1vw;
-} */
+  main{
+    grid-area: body;
+  }
+  footer{
+    grid-area: footer;  
+  }

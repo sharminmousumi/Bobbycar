@@ -1,5 +1,4 @@
 header{
-
   background-color: #efefef;
   color: #3d3d3d;
   height: 80px;
@@ -19,7 +18,12 @@ margin-right: 1em;
 .bobbyIcon{
 height: 80px;
 }
+
 .shopIcon{
 height: 40px;
+}
 
+.shopIcon >img{
+width: 40px;
+height: 25px;
 }
