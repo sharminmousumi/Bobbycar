@@ -9,17 +9,31 @@ import { actions } from "../features/cart";
 
 const Product = () => {
     const dispatch = useDispatch();
-    const productList=[
-
-        {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
-        {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
-        {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
-        {name:'Fulda classic', price:200,im:<img className="set bobby" src="img/bobby4.jpg" alt="bobby" />},
-        {name:'Neo', price:800,im:<img className="set bobby" src="img/bobby5.jpg" alt="bobby" />},
-        {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
-        {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
-        {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
+    const productList = [
+        { name: 'Classic Racer', price: 600 },
+        { name: 'Delux ', price: 400 },
+        { name: 'Ledljus', price: 700 },
+        { name: 'Fulda classic', price: 200 },
+        { name: 'Neo', price: 800 },
+        { name: 'porse', price: 600 },
+        { name: 'Bmw', price: 400 },
+        { name: 'Mercdeze', price: 700 },
+        { name: 'Peoso', price: 200 },
+        { name: 'Renult', price: 800 },
+        { name: 'Honda', price: 200 },
+        { name: 'Toyota', price: 800 },
     ]
+    // const productList=[
+
+    //     {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
+    //     {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
+    //     {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
+    //     {name:'Fulda classic', price:200,im:<img className="set bobby" src="img/bobby4.jpg" alt="bobby" />},
+    //     {name:'Neo', price:800,im:<img className="set bobby" src="img/bobby5.jpg" alt="bobby" />},
+    //     {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
+    //     {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
+    //     {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
+    // ]
        
     const [sort, setSort]=useState("");
     const data = productList.map((item)=> {
