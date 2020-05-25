@@ -1,11 +1,10 @@
 
-.container{
+.itemSearchContainer{
   display: grid;
-  grid-template-rows: 1fr 1fr;
   border:10px solid #EFEFEF;
   background-color: #EFEFEF;
-  margin-left: 40px;
-  margin-right: 40px;
+  /* margin-left: 40px;
+  margin-right: 40px; */
   height: auto;
 }
 .products {
@@ -30,7 +29,7 @@
 }
 .search {
  display: grid;
- grid-template-columns: auto auto auto auto;
+ 
 }
 .search > p{
   margin-top:5px;
@@ -40,9 +39,9 @@
   text-align: right;
   color: white;
   display: grid;
-  margin-right: 40px;
+  /* margin-right: 40px;
   margin-left: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 15px; */
 }
 .bottom-right {
   position: absolute;
@@ -54,6 +53,9 @@
 @media only screen and (min-width: 750px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .search{
+    grid-template-columns: auto auto auto auto;
   }
 }
 /* Bigger than Phones(laptop / desktop) */

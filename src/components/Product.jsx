@@ -84,13 +84,12 @@ const Product = () => {
             </div>
 
             
-            <div className="container">
+            <div className="itemSearchContainer">
                 <div className="search">
                     <p>köp din bil här</p>
                     <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
                 </div>
                 <div className="products">
-                    
                 {data}
                 </div>
             </div>
