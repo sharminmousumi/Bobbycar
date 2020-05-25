@@ -3,59 +3,90 @@
     margin: 0;
     box-sizing: border-box;
 }
-body {
-    background-image: none;
+
+img{
+    width: 80%;
+    height: 150px;
 }
 
-img {
-    height: 10em;
-    width: 10em;
-}
-.cart {
-    max-width: 50vw;
-    margin:1em 0;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-}
-.cart.product-container  div {
-    display: flex;
-}
-.cart.product-container  button {
-  font-size: 16px;
- margin: 0.1em;
-}
-
-.cart-headers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
 .cart.product-container {
     background-color: rgb(248, 248, 248);
-    padding: 1em 1.5em;
+    padding: 0.2em;
     border: solid rgba(0, 0, 0, 0.11) 1px;
-    margin: 0em;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
-    
+    margin-top: 0;
+    width: 100vw;
 }
 
+.cart-header {
+    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.cart-price-count {
+    padding-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+.cart-product-model  {
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-right: 0.5em;
+}
+.cart-product-price {
+    text-align: left;
+}
+.cart-product-count {
+text-align: left;
+
+}
 .delete-button {
-    position: relative;
     display: inline-block;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
     background-color: red;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
     border: none;
-    padding: 0.3em;
     cursor: pointer;
     transition: ease-in-out 0.1s;
-    right: 0;
-
 }
-.delete-button:hover {
-    transform: scale(1.1);
+.delete-button:active {
+    transform: scale(1.2);
+}
+.count-buttons {
+flex-direction: column;
+display: inline-flex;
+}
+
+.count-button-up, .count-button-down {
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+margin-right: 0.5em;
+}
+.count-button-up {
+    border-radius: 5px;
+    background-color: #313131;
+    border: 0;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0.2em;
+}
+.count-button-down {
+    border-radius: 5px;
+    background-color: #313131;
+    border: 0;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 1em;
 }
 .container {
       display: flex;
@@ -69,4 +100,18 @@ img {
       font-weight: 600;
       color: black;
       border: solid rgba(0, 0, 0, 0.11) 1px;
+  }
+  .arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
   }

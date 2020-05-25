@@ -1,6 +1,5 @@
 import { createAction, createReducer } from '@reduxjs/toolkit';
 
-
 const addToCart = createAction('add to cart');
 const removeFromCart = createAction('remove from cart');
 const increaseAmount = createAction('increase amount');
@@ -9,10 +8,10 @@ const decreaseAmount = createAction('decreaseAmount');
 const actions = { addToCart, removeFromCart, increaseAmount, decreaseAmount };
 
 const initialState = [
-    // {
-    //     product: { model: 'Honda', price: 100, },
-    //     count: 1,
-    // },
+    {
+        product: { name: 'Queen poki', price: 500, image: "https://static-cdn.jtvnw.net/emoticons/v1/70368/3.0" },
+        count: 1,
+    },
 ];
 
 const reducer = createReducer(initialState, {
