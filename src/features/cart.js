@@ -8,10 +8,10 @@ const decreaseAmount = createAction('decreaseAmount');
 const actions = { addToCart, removeFromCart, increaseAmount, decreaseAmount };
 
 const initialState = [
-    {
-        product: { name: 'Queen poki', price: 500, image: "https://static-cdn.jtvnw.net/emoticons/v1/70368/3.0" },
-        count: 1,
-    },
+    // {
+    //     product: { name: 'Super bobby v2', price: 500, im: "img/bobby1.jpeg" },
+    //     count: 1,
+    // },
 ];
 
 const reducer = createReducer(initialState, {
