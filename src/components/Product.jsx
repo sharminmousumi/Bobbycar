@@ -18,6 +18,8 @@ const Product = () => {
         {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
         {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
         {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
+
+        
     ]
     // const productList=[
 
@@ -33,7 +35,7 @@ const Product = () => {
        
     const [sort, setSort]=useState("");
     const data = productList.map((item)=> {
-        const handleClick = () => dispatch(actions.addToCart(item))
+   const handleClick = () => dispatch(actions.addToCart(item))
         if(sort.length !== 0) {
             if (item.name.toUpperCase().match(sort.toUpperCase())
             ||(item.price.toString().match(sort.toString()))
@@ -41,10 +43,11 @@ const Product = () => {
             ) {
             return <div  key={item.name}> 
                     <div  className="grid-item">
-                        {item.name}<br/>
+                       {item.name}> <br/>
                         {item.price} <br/>
                         <div className="image">
                             {item.im} 
+                            <button className="but" onClick={handleClick}>Add to Shopping</button>  
                         </div>
                     </div>
                 </div>
@@ -56,14 +59,16 @@ const Product = () => {
         
 
     return <div  key={item.name}> 
-                <div  className="grid-item">
-                    Model:{item.name}<br/>
-                    Price:{item.price} <br/>
+                <div  className="grid-item" >
+                 {/* <div  className="grid-item" onClick={handleClick}>  */}
+                    <a> Model:{item.name}</a> <br/>
+                     Price:{item.price} <br/>
                     <div className="image">
                     {item.im} 
-                    <button className="but" onClick={handleClick}>Add to Shopping</button>
+                  <button className="but" onClick={handleClick}>Add to Shopping</button>  
+                        </div>
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         })
     return (
@@ -81,10 +86,21 @@ const Product = () => {
 
             
             <div className="itemSearchContainer">
-                <div className="search">
-                    <p>köp din bil här</p>
+
+            <form >
+                    <div className="row">
+                        <div  className="col-25">
+                            <label >köp din bil här</label>
+                        </div>
+                        <div className="col-75">
+                        <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
+                        </div>
+                    </div>
+            </form>
+                {/* <form className="search">
+                    <label className="searchFornt">köp din bil här</label>
                     <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
-                </div>
+                </form> */}
                 <div className="products">
                 {data}
                 </div>
