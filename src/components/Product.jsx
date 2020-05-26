@@ -10,18 +10,18 @@ import { actions } from "../features/cart";
 const Product = () => {
     const dispatch = useDispatch();
     const productList = [
-        { name: 'Classic Racer', price: 600 },
-        { name: 'Delux ', price: 400 },
-        { name: 'Ledljus', price: 700 },
-        { name: 'Fulda classic', price: 200 },
-        { name: 'Neo', price: 800 },
-        { name: 'porse', price: 600 },
-        { name: 'Bmw', price: 400 },
-        { name: 'Mercdeze', price: 700 },
-        { name: 'Peoso', price: 200 },
-        { name: 'Renult', price: 800 },
-        { name: 'Honda', price: 200 },
-        { name: 'Toyota', price: 800 },
+        { name: 'Classic Racer', price: 600, im: "img/bobby1.jpg" },
+        { name: 'Delux ', price: 400, im: "img/bobby2.jpg" },
+        { name: 'Ledljus', price: 700, im: "img/bobby3.jpg" },
+        { name: 'Fulda classic', price: 200, im: "img/bobby4.jpg" },
+        { name: 'Neo', price: 800, im: "img/bobby5.jpg" },
+        { name: 'porse', price: 600, im: "img/bobby6.jpg" },
+        { name: 'Bmw', price: 400, im: "img/bobby7.jpg" },
+        { name: 'Mercdeze', price: 700, im: "img/bobby8.jpg" },
+        { name: 'Peoso', price: 200, im: "img/bobby9.jpg" },
+        { name: 'Renult', price: 800, im: "img/bobby10.jpg" },
+        { name: 'Honda', price: 200, im: "img/bobby11.jpg" },
+        { name: 'Toyota', price: 800, im: "img/bobby12.jpg" },
     ]
     // const productList=[
 
@@ -48,7 +48,7 @@ const Product = () => {
                         {item.name}<br/>
                         {item.price} <br/>
                         <div className="image">
-                            {item.im} 
+                        <img className="set bobby" src={item.im}  alt="bobby" />
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Product = () => {
                     Model:{item.name}<br/>
                     Price:{item.price} <br/>
                     <div className="image">
-                    {item.im} 
+                    <img className="set bobby" src={item.im}  alt="bobby" />
                     <button className="but" onClick={handleClick}>Add to Shopping</button>
                     </div>
                 </div>
