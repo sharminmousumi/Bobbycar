@@ -1,77 +1,98 @@
 /* eslint-disable */
+
+
 import React, { useState } from 'react';
 import './product.css';
-//import img from './447265.jpeg'
-import image from '../images/car.png'
+import images from '../images/background.jpg';
+import { useDispatch } from 'react-redux';
+import { actions } from "../features/cart";
 
 const Product = () => {
-    
-    const productList=[
-        {name:'Classic Racer', price:600, image:'../images/447265.jpeg'},
-        {name:'Delux ', price:400, image:'../images/447265.jpeg'},
-        {name:'Ledljus', price:700, image:'../images/447265.jpeg'},
-        {name:'Fulda classic', price:300, image:'../images/447265.jpeg'},
-        {name:'Neo', price:800, image:'../images/447265.jpeg'},
-        {name:'porse', price:600, image:'../images/447265.jpeg'},
-        {name:'Bmw', price:400, image:'../images/447265.jpeg'},
-        {name:'Mercdeze', price:700, image:'../images/447265.jpeg'},
-        {name:'Peoso', price:200, image:'../images/447265.jpeg'},
-        {name:'Renult', price:800, image:'../images/447265.jpeg'},
-        {name:'Honda',price:900, image:'../images/447265.jpeg'},
-        {name:'Toyota', price:800,image:'../images/447265.jpeg'},
-        ]
-        
-        
-        const [sort, setSort]=useState("");
-        const data = productList.map((item)=> {
-            if(sort.length !== 0) {
-                if (item.name.toUpperCase().match(sort.toUpperCase())
-                ||(item.price.toString().match(sort.toString()))
-                
-                ) {
-             return <div  key={item.name}> 
+    const dispatch = useDispatch();
+    const productList = [
+        { name: 'Classic Racer', price: 600 },
+        { name: 'Delux ', price: 400 },
+        { name: 'Ledljus', price: 700 },
+        { name: 'Fulda classic', price: 200 },
+        { name: 'Neo', price: 800 },
+        { name: 'porse', price: 600 },
+        { name: 'Bmw', price: 400 },
+        { name: 'Mercdeze', price: 700 },
+        { name: 'Peoso', price: 200 },
+        { name: 'Renult', price: 800 },
+        { name: 'Honda', price: 200 },
+        { name: 'Toyota', price: 800 },
+    ]
+    // const productList=[
+
+    //     {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
+    //     {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
+    //     {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
+    //     {name:'Fulda classic', price:200,im:<img className="set bobby" src="img/bobby4.jpg" alt="bobby" />},
+    //     {name:'Neo', price:800,im:<img className="set bobby" src="img/bobby5.jpg" alt="bobby" />},
+    //     {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
+    //     {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
+    //     {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
+    // ]
+       
+    const [sort, setSort]=useState("");
+    const data = productList.map((item)=> {
+        const handleClick = () => dispatch(actions.addToCart(item))
+        if(sort.length !== 0) {
+            if (item.name.toUpperCase().match(sort.toUpperCase())
+            ||(item.price.toString().match(sort.toString()))
+            
+            ) {
+            return <div  key={item.name}> 
                     <div  className="grid-item">
-                    <div className="model"> Model:{item.name}</div>
+                        {item.name}<br/>
                         {item.price} <br/>
-                        <img src={image} alt="pic"></img>
-                   {/* <button className="but">Add to Shopping</button> */}
-            </div>
-            </div>
-                }
-                else {
-                    return null
-                }
-            }
-          
-            return  
-                    <div key={item.price}> 
-                
-                         <div  className="grid-item">
-           
-                                <div className="model"> Model:{item.name}</div>
-                                Från:{item.price} <br/>
-                        <           img src={image} alt="pic"/>
-                                     {/* <button className="but" >Add to Shopping</button> */}
-            
-                            </div>
+                        <div className="image">
+                            {item.im} 
+                        </div>
                     </div>
+                </div>
+            }
+            else {
+                return null
+            }
+        }
         
-            
+
+    return <div  key={item.name}> 
+                <div  className="grid-item">
+                    Model:{item.name}<br/>
+                    Price:{item.price} <br/>
+                    <div className="image">
+                    {item.im} 
+                    <button className="but" onClick={handleClick}>Add to Shopping</button>
+                    </div>
+                </div>
+            </div>
         })
     return (
-        <div >
-            <div className="search">
-            <label >Köp din bil lalala</label> <span>    </span>
-            <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
-            </div>
-            
-            <div className="products">
-                            
-            {data}
-            
+
+        <div className="wrapper">
+            <div className="bigPictureWrapper">
+                <img className="backgroundimg"   src={images} alt="background"/>
+                <div className="bottom-right">
+                    <h1>Köp din bobby car online</h1>
+                    <p>Fri frakt på allt</p>
+                    <p>Livstid service</p>
+                    <p>Snabbast och säkrast</p>
+                </div>
             </div>
 
-
+            
+            <div className="itemSearchContainer">
+                <div className="search">
+                    <p>köp din bil här</p>
+                    <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
+                </div>
+                <div className="products">
+                {data}
+                </div>
+            </div>
         </div>
     );
 };

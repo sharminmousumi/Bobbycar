@@ -1,29 +1,29 @@
 header{
-    background-color: #efefef;
-    color: #3d3d3d;
-    height: 80px;
-  }
-  .item{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px;
-    font-size: 2em;
-    font-weight: 300;
-    list-style: none;
-  }
+  background-color: #efefef;
+  color: #3d3d3d;
+  height: 80px;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px;
+  font-size: 2em;
+  font-weight: 300;
+  list-style: none;
+}
 .item > li:last-child{
-  margin-right: 1em;
+margin-right: 1em;
 }
 .bobbyIcon{
-  height: 80px;
+height: 80px;
 }
 
 .shopIcon{
-  height: 40px;
+height: 40px;
 }
 
-.Cartlogo >img{
-  width: 40px;
-  height: 25px;
+.shopIcon >img{
+width: 40px;
+height: 25px;
 }
