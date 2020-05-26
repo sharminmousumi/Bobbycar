@@ -1,56 +1,93 @@
-
-
-/* img {
-    height: 10em;
-    width: 10em;
-}
-ajjabajja
-*/
-.cart {
-    max-width: 50vw;
-    margin:1em 0;
-    display: flex;
-    flex-direction: column;
-    width: 90vw;
-}
-.cart.product-container  div {
-    display: flex;
-}
-.cart.product-container  button {
-  font-size: 16px;
- margin: 0.1em;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.cart-headers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+img{
+    width: 80%;
+    height: 150px;
 }
+
 .cart.product-container {
     background-color: rgb(248, 248, 248);
-    padding: 1em 1.5em;
-    border: solid rgba(0, 0, 0, 0.11) 1px;
-    margin: 0em;
+    padding: 0.2em;
+    border: solid rgba(0, 0, 0, 0.26) 1px;
+    margin-top: 0;
+    width: 100vw;
+}
+
+.cart-header {
+    padding: 0.5em;
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: space-around;
-    
+    justify-content: space-between;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+.cart-price-count {
+    padding-left: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+.cart-product-model  {
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-right: 0.5em;
+}
+.cart-product-price {
+    text-align: left;
+}
+.cart-product-count {
+text-align: left;
+
 }
 
 .delete-button {
-    position: relative;
     display: inline-block;
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
     background-color: red;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
     border: none;
-    padding: 0.3em;
     cursor: pointer;
     transition: ease-in-out 0.1s;
-    right: 0;
-
 }
-.delete-button:hover {
+.delete-button:active {
     transform: scale(1.1);
+}
+.count-buttons {
+flex-direction: column;
+display: inline-flex;
+}
+
+.count-button-up, .count-button-down {
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+margin-right: 0.5em;
+}
+.count-button-up {
+    border-radius: 5px;
+    background-color: #313131;
+    border: 0;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0.2em;
+}
+.count-button-down {
+    border-radius: 5px;
+    background-color: #313131;
+    border: 0;
+    width: 35px;
+    height: 35px;
+    margin-bottom: 1em;
 }
 .container {
       display: flex;
@@ -65,3 +102,81 @@ ajjabajja
       color: black;
       border: solid rgba(0, 0, 0, 0.11) 1px;
   }
+  .arrow {
+    border: solid white;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .item-summary {
+      padding: 0.5em;
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 1em;
+  }
+  .item-summary::after {
+      position: absolute;
+      content: "";
+      border-bottom: 1px solid rgba(0, 0, 0, 0.411);
+      width: 90%;
+     bottom: 0;
+  }
+
+  .input-fields > input {
+      border: solid 1px rgba(0, 0, 0, 0.336);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      margin: 0.5em;
+      height: 1.8em;
+  }
+
+  .input-fields > p {
+      text-align: left;
+      margin: 0.5em;
+  }
+
+  .input-card-info {
+      text-align: left;
+      display: flex;
+      flex-direction: row;
+      height: 1em;
+      margin: 0.5em;
+  }
+  .input-card-info input {
+    border: solid 1px rgba(0, 0, 0, 0.336);
+    border-radius: 2px;
+    height: 1.8em;
+  }
+ .input-cvc {
+     margin-left: 1.2em;
+    width: 3em;
+ }
+ .cvc-header {
+    margin-left: 1.2em;
+ }
+ .cta-button {
+     cursor: pointer;
+     border-radius: 5px;
+     border:1px solid black;
+     font-weight: 700;
+     width: 15em;
+     height: 4em;
+     margin-bottom: 5em;
+     justify-self: center;
+     margin-top: 5em;
+     background-color: rgb(116, 231, 0);
+     transition: ease-in-out 0.1s;
+ }
+ .cta-button:active {
+     transform: scale(1.03);
+ }
