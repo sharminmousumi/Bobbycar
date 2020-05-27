@@ -2,11 +2,13 @@ import React from 'react';
 import "./Cart.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { actions } from '../features/cart';
-
+import { useForm } from 'react-hook-form';
 
 const ShoppingCart = () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.cart);
+    const { handleSubmit, register, errors } = useForm();
+    const onSubmit = values => console.log(values);
     let sum = 0;
     data.forEach(cartItem => { sum += cartItem.product.price * cartItem.count });
 
@@ -58,31 +60,78 @@ const ShoppingCart = () => {
                     <h2>Summering</h2>
                     {itemSummary}
                     <p className="sum">Totalt: {sum}Kr</p>
-                    <div className="input-fields">
+                    <form onSubmit={handleSubmit(onSubmit)} className="input-fields">
+
                         <p className="input-header">Förnamn</p>
-                        <input type="text" />
+                        <div>
+                        <input name="firstname" type="text" ref={register({ required: true,  pattern: /^[A-Za-z]+$/i })} />
+                        {errors.firstname && <span>This field is required</span>}
+                        </div>
+
+
+
                         <p className="input-header">Efternamn</p>
-                        <input type="text" />
+                        <div>
+                        <input name="lastname" type="text" ref={register({ required: true, pattern: /^[A-Za-z]+$/i })} />
+                        {errors.lastname && <span>This field is required</span>}
+                        </div>
+
+
                         <p className="input-header">Adress</p>
-                        <input type="text" />
+                        <div>
+                            <input name="adress" type="text" ref={register({ required: true })} />
+                            {errors.adress && <span>This field is required</span>}
+                        </div>
+
                         <p className="input-header">Postnummer</p>
-                        <input type="text" />
+                        <div>
+                            <input name="post" type="text" ref={register({ required: true, pattern: /^[0-9]{3}\s*[0-9]{2}^/  })} />
+                            {errors.post && <span>This field is required</span>}
+                        </div>
+
                         <p className="input-header">Email</p>
-                        <input type="text" />
+                        <div>
+                            <input type="text"
+                                name="email"
+                                ref={register({
+                                required: true,
+                                pattern: {
+                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                    message: "invalid email address"
+                                }
+                                })}
+                            />
+                            {errors.email && errors.email.message}
+                        </div>
+                        
                         <p className="input-header">Telefon</p>
-                        <input type="text" />
+                        <div>
+                            <input name="phone" type="text" ref={register({ required: true, pattern: /\+?[-0-9 ]*/ })} />
+                            {errors.phone && <span>This field is required</span>}
+                        </div>
+                        <div>
+                        
                         <div className="input-card-info">
                             <div><p className="input-header">Kortnummer </p>
-                                <input type="text" />
+                                <div>
+                                   <input name="cardnumber" type="text" ref={register({ required: true, pattern: /^[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}$/ })} />
+                                    {errors.cardnumber && <span>This field is required</span>}
+                                </div>
                             </div>
                             <div>
                                 <p className="input-header cvc-header">Cvc </p>
-                                <input type="text" className="input-cvc" />
+                                <div>
+                                <input name="cvc" className="cvc" type="text" ref={register({ required: true, pattern: /^[0-9]{3}$/ })} /> 
+                                    {errors.cvc && <span>This field is required</span>}
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                    <button className="cta-button">Köp nu</button>
+                        
+                        <button type="submit" className="cta-button" onClick={alert("Hello! I am an alert box!!")}>Köp nu</button>
+                        </div>
+                    </form>
+                    {/* <input type="submit"/> */}
+                   
                 </div>
             </div>
         </>
