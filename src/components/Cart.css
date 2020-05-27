@@ -1,3 +1,14 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cart-img{
+    width: 80%;
+    height: 150px;
+    max-width: 270px;
+}
 
 
 .cart.product-container {
@@ -109,17 +120,18 @@ margin-right: 0.5em;
   }
   .item-summary {
       padding: 0.5em;
+      padding: 0 2em;
       position: relative;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-evenly;
       margin-bottom: 1em;
   }
-  .item-summary::after {
-      position: absolute;
-      content: "";
-      border-bottom: 1px solid rgba(0, 0, 0, 0.411);
-      width: 90%;
-     bottom: 0;
+ 
+  .item-summary p {
+      text-align: left;
+  }
+  .sum-p{
+      text-align: right;
   }
 
   .input-fields > input {
@@ -129,6 +141,7 @@ margin-right: 0.5em;
       flex-direction: column;
       margin: 0.5em;
       height: 1.8em;
+      max-width: 12.5em;
   }
 
   .input-fields > p {
@@ -170,4 +183,46 @@ margin-right: 0.5em;
  }
  .cta-button:active {
      transform: scale(1.03);
+ }
+
+ @media only screen and (min-width: 650px) {
+     .cart.product-container {
+        max-width: 40vw;
+         position: relative;
+     }
+     .cart-product-model {
+         margin-left: 8em;
+     }
+     .cart-img {
+         margin: 1em;
+         width: 100px;
+         height: 100px;
+         position: absolute;
+         top: 0;
+         left: 0;
+     }
+     .product-info {
+        justify-content: flex-end;
+     }
+     .cart-price-count {
+         margin-right: 1em;
+     }
+     .item-summary {
+        padding: 0 5em;
+       justify-content: space-evenly;
+     }
+  .input-fields {
+      display: grid;
+      grid-template-columns: 70px 170px 100px 170px;
+  }
+.input-fields p {
+    text-align: right;
+}
+.input-card-info {
+    width: 200px;
+    margin-left: 5em;
+}
+.input-card-info p {
+    text-align: left;
+}
  }
