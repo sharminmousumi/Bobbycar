@@ -10,29 +10,17 @@ import { actions } from "../features/cart";
 const Product = () => {
     const dispatch = useDispatch();
     const productList = [
-        {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
-        {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
-        {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
-        {name:'Fulda classic', price:200,im:<img className="set bobby" src="img/bobby4.jpg" alt="bobby" />},
-        {name:'Neo', price:800,im:<img className="set bobby" src="img/bobby5.jpg" alt="bobby" />},
-        {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
-        {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
-        {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
-
-        
+        {name:'Classic Racer', price:600,im:"img/bobby1.jpeg" },
+        {name:'Delux ', price:400,im:"img/bobby2.jpg"},
+        {name:'Ledljus', price:700,im:"img/bobby3.jpg"},
+        {name:'Fulda classic', price:200,im:"img/bobby4.jpg"},
+        {name:'Neo', price:800,im:"img/bobby5.jpg"},
+        {name:'porse', price:600,im:"img/bobby6.jpg"},
+        {name:'Bmw', price:400,im:"img/bobby7.jpg"},
+        {name:'Mercdeze', price:700,im:"img/bobby8.jpg"},   
     ]
-    // const productList=[
 
-    //     {name:'Classic Racer', price:600,im:<img className="set bobby" src="img/bobby1.jpeg" alt="bobby" />},
-    //     {name:'Delux ', price:400,im:<img className="set bobby" src="img/bobby2.jpg" alt="bobby2" />},
-    //     {name:'Ledljus', price:700,im:<img className="set bobby" src="img/bobby3.jpg" alt="bobby3" />},
-    //     {name:'Fulda classic', price:200,im:<img className="set bobby" src="img/bobby4.jpg" alt="bobby" />},
-    //     {name:'Neo', price:800,im:<img className="set bobby" src="img/bobby5.jpg" alt="bobby" />},
-    //     {name:'porse', price:600,im:<img className="set bobby" src="img/bobby6.jpg" alt="bobby" />},
-    //     {name:'Bmw', price:400,im:<img className="set bobby" src="img/bobby7.jpg" alt="bobby" />},
-    //     {name:'Mercdeze', price:700,im:<img className="set bobby" src="img/bobby8.jpg" alt="bobby" />},
-    // ]
-       
+     // Prints out the objects that are searched for.  
     const [sort, setSort]=useState("");
     const data = productList.map((item)=> {
    const handleClick = () => dispatch(actions.addToCart(item))
@@ -42,13 +30,11 @@ const Product = () => {
             
             ) {
             return <div  key={item.name}> 
-                    <div  className="grid-item">
-                       {item.name}> <br/>
-                        {item.price} <br/>
-                        <div className="image">
-                            {item.im} 
-                            <button className="but" onClick={handleClick}>Add to Shopping</button>  
-                        </div>
+                        <div  className="grid-item" >
+                        <a> Model: {item.name}</a>
+                        <p> Price: {item.price} </p>
+                        <img src={item.im} alt="bobby2" />
+                        <button className="but" onClick={handleClick}>Add to Shopping</button>  
                     </div>
                 </div>
             }
@@ -56,19 +42,16 @@ const Product = () => {
                 return null
             }
         }
-        
+     //end of search print   
 
+     //prints out all the available objects
     return <div  key={item.name}> 
                 <div  className="grid-item" >
-                 {/* <div  className="grid-item" onClick={handleClick}>  */}
-                    <a> Model:{item.name}</a> <br/>
-                     Price:{item.price} <br/>
-                    <div className="image">
-                    {item.im} 
-                  <button className="but" onClick={handleClick}>Add to Shopping</button>  
-                        </div>
-                    </div>
-                {/* </div> */}
+                    <a> Model: {item.name}</a>
+                    <p> Price: {item.price} </p>
+                    <img src={item.im} alt="bobby2" />
+                    <button className="but" onClick={handleClick}>Add to Shopping</button>  
+                </div>
             </div>
         })
     return (
@@ -87,15 +70,15 @@ const Product = () => {
             
             <div className="itemSearchContainer">
 
-            <form >
-                    <div className="row">
-                        <div  className="col-25">
-                            <label >köp din bil här</label>
-                        </div>
-                        <div className="col-75">
-                        <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
-                        </div>
+            <form>
+                <div className="row">
+                    <div  className="col-25">
+                        <label >köp din bil här</label>
                     </div>
+                    <div className="col-75">
+                    <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />
+                    </div>
+                </div>
             </form>
                 {/* <form className="search">
                     <label className="searchFornt">köp din bil här</label>

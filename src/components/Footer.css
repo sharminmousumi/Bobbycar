@@ -11,12 +11,10 @@
 .socialmediaimg{
   height: 80px;
 }
-/* Bigger than Phones(tablet) */
-@media only screen and (min-width: 750px) {
-  .footer {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.text > p:first-child{
+  font-weight: bold;
 }
+
 
 /* Bigger than Phones(laptop / desktop) */
 @media only screen and (min-width: 970px) {

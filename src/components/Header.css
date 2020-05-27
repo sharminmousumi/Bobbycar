@@ -11,16 +11,20 @@ header{
   font-size: 2em;
   font-weight: 300;
   list-style: none;
+  padding: auto 1em auto 1em;
 }
-.item > li:last-child{
-margin-right: 1em;
-}
+
 .bobbyIcon{
 height: 80px;
+padding: 0;
 }
-
 .shopIcon{
-  width: 100px;
-height: 40px;
+  height: 40px;
 }
 
+
+@media (max-width: 480px) {
+  .item{
+    padding: 0;
+  }
+}
