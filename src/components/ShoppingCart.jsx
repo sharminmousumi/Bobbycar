@@ -44,7 +44,7 @@ const ShoppingCart = () => {
                                 disabled={item.count === 0} ><i className="arrow down"></i></button>
                         </div>
                     </div>
-                    <img src={item.product.im} alt="" />
+                    <img className="cart-img" src={item.product.im} alt="" />
                 </div>
             </div>
         )
@@ -80,8 +80,9 @@ const ShoppingCart = () => {
                                 <input type="text" className="input-cvc" />
                             </div>
                         </div>
-                        <button className="cta-button">Köp nu</button>
+
                     </div>
+                    <button className="cta-button">Köp nu</button>
                 </div>
             </div>
         </>
