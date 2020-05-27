@@ -73,7 +73,7 @@ const Product = () => {
             <form>
                 <div className="row">
                     <div  className="col-25">
-                        <label >köp din bil här</label>
+                        <label ></label>
                     </div>
                     <div className="col-75">
                     <input className="SearchProduct" type="text" placeholder="search..." value={sort} onChange={(event) => setSort(event.target.value)} />

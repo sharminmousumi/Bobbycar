@@ -43,8 +43,7 @@
 }
 .bottom-right {
   position: absolute;
-  bottom: 8px;
-  right: 50px;
+  
 }
 
 
@@ -109,8 +108,9 @@ input[type=submit] {
   .products {
     grid-template-columns: repeat(4, 1fr);
   }
-  .search{
-    grid-template-columns: auto auto auto auto;
+  .bottom-right{
+    bottom: 8px;
+    right: 50px;
   }
   .col-25, .col-75, input[type=submit] {
     width: 100%;
@@ -122,16 +122,23 @@ input[type=submit] {
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
+  .bottom-right{
+    bottom: 8px;
+    right: 50px;
+  }
 }
 @media (max-width: 480px) {
   .products{
     grid-template-columns: 1fr;
+    
   }
   .bottom-right {
     position: relative;
+    margin-right: 10px;
     
   }
   .bigPictureWrapper{
     background-color: #3d3d3d;
+    font-size: 0.75em;
   }
 }
