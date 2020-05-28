@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "672533cd19f4caeb4898ff40b0516414",
+    "revision": "5e147bb59485c2cefd8fd36d8f1c4e3d",
     "url": "/Bobbycar/index.html"
   },
   {
-    "revision": "0e4153dc02fb0429df49",
-    "url": "/Bobbycar/static/css/main.2826d31e.chunk.css"
+    "revision": "01f7f3211e836325e94f",
+    "url": "/Bobbycar/static/css/main.f36b5a84.chunk.css"
   },
   {
     "revision": "4700b7cbab45be2ce273",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Bobbycar/static/js/2.f68b744c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e4153dc02fb0429df49",
-    "url": "/Bobbycar/static/js/main.0dbc3139.chunk.js"
+    "revision": "01f7f3211e836325e94f",
+    "url": "/Bobbycar/static/js/main.52c10b31.chunk.js"
   },
   {
     "revision": "882f0c00eeb1e842dc15",

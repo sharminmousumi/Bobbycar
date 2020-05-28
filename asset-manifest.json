@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Bobbycar/static/css/main.2826d31e.chunk.css",
-    "main.js": "/Bobbycar/static/js/main.0dbc3139.chunk.js",
-    "main.js.map": "/Bobbycar/static/js/main.0dbc3139.chunk.js.map",
+    "main.css": "/Bobbycar/static/css/main.f36b5a84.chunk.css",
+    "main.js": "/Bobbycar/static/js/main.52c10b31.chunk.js",
+    "main.js.map": "/Bobbycar/static/js/main.52c10b31.chunk.js.map",
     "runtime-main.js": "/Bobbycar/static/js/runtime-main.3fa4415e.js",
     "runtime-main.js.map": "/Bobbycar/static/js/runtime-main.3fa4415e.js.map",
     "static/js/2.f68b744c.chunk.js": "/Bobbycar/static/js/2.f68b744c.chunk.js",
     "static/js/2.f68b744c.chunk.js.map": "/Bobbycar/static/js/2.f68b744c.chunk.js.map",
     "index.html": "/Bobbycar/index.html",
-    "precache-manifest.c0519c39637bc25b6f0715d88b2e203e.js": "/Bobbycar/precache-manifest.c0519c39637bc25b6f0715d88b2e203e.js",
+    "precache-manifest.6c587ee2ecb3afde8bc4c7bdaeddc0d7.js": "/Bobbycar/precache-manifest.6c587ee2ecb3afde8bc4c7bdaeddc0d7.js",
     "service-worker.js": "/Bobbycar/service-worker.js",
-    "static/css/main.2826d31e.chunk.css.map": "/Bobbycar/static/css/main.2826d31e.chunk.css.map",
+    "static/css/main.f36b5a84.chunk.css.map": "/Bobbycar/static/css/main.f36b5a84.chunk.css.map",
     "static/js/2.f68b744c.chunk.js.LICENSE.txt": "/Bobbycar/static/js/2.f68b744c.chunk.js.LICENSE.txt",
     "static/media/background.jpg": "/Bobbycar/static/media/background.7de3f599.jpg",
     "static/media/fb.png": "/Bobbycar/static/media/fb.c3f83915.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.3fa4415e.js",
     "static/js/2.f68b744c.chunk.js",
-    "static/css/main.2826d31e.chunk.css",
-    "static/js/main.0dbc3139.chunk.js"
+    "static/css/main.f36b5a84.chunk.css",
+    "static/js/main.52c10b31.chunk.js"
   ]
 }
