@@ -65,7 +65,7 @@ const ShoppingCart = () => {
                         <p className="input-header">Förnamn</p>
                         <div>
                         <input name="firstname" type="text" ref={register({ required: true,  pattern: /^[A-Za-z]+$/i })} />
-                        {errors.firstname && <span>This field is required</span>}
+                        {errors.firstname && <span>Du måste fylla i ditt förnamn</span>}
                         </div>
 
 
@@ -73,62 +73,52 @@ const ShoppingCart = () => {
                         <p className="input-header">Efternamn</p>
                         <div>
                         <input name="lastname" type="text" ref={register({ required: true, pattern: /^[A-Za-z]+$/i })} />
-                        {errors.lastname && <span>This field is required</span>}
+                        {errors.lastname && <span>Du måste fylla i ditt efternamn</span>}
                         </div>
 
 
                         <p className="input-header">Adress</p>
                         <div>
                             <input name="adress" type="text" ref={register({ required: true })} />
-                            {errors.adress && <span>This field is required</span>}
+                            {errors.adress && <span>Du måste fylla i din adress</span>}
                         </div>
 
                         <p className="input-header">Postnummer</p>
                         <div>
                             <input name="post" type="text" ref={register({ required: true, pattern: /^[0-9]{3}\s*[0-9]{2}^/  })} />
-                            {errors.post && <span>This field is required</span>}
+                            {errors.post && <span>5 siffror</span>}
                         </div>
 
                         <p className="input-header">Email</p>
                         <div>
-                            <input type="text"
-                                name="email"
-                                ref={register({
-                                required: true,
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                    message: "invalid email address"
-                                }
-                                })}
-                            />
-                            {errors.email && errors.email.message}
+                            
+                            <input name="email" type="text" ref={register({ required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} />
+                            {errors.email && <span>Du måste fylla i din email adress</span>}
+                                
                         </div>
                         
                         <p className="input-header">Telefon</p>
                         <div>
                             <input name="phone" type="text" ref={register({ required: true, pattern: /\+?[-0-9 ]*/ })} />
-                            {errors.phone && <span>This field is required</span>}
+                            {errors.phone && <span>Du måste fylla i ditt telefonnummer</span>}
                         </div>
+                        
+                        
+                        <p className="input-header">Kortnummer </p>
                         <div>
-                        
-                        <div className="input-card-info">
-                            <div><p className="input-header">Kortnummer </p>
-                                <div>
-                                   <input name="cardnumber" type="text" ref={register({ required: true, pattern: /^[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}$/ })} />
-                                    {errors.cardnumber && <span>This field is required</span>}
-                                </div>
-                            </div>
+                            <input name="cardnumber" type="text" ref={register({ required: true, pattern: /^[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}$/ })} />
+                            {errors.cardnumber && <span>16 siffror</span>}
+                        </div>
+                        <p className="input-header cvc-header">Cvc </p>   
                             <div>
-                                <p className="input-header cvc-header">Cvc </p>
-                                <div>
                                 <input name="cvc" className="cvc" type="text" ref={register({ required: true, pattern: /^[0-9]{3}$/ })} /> 
-                                    {errors.cvc && <span>This field is required</span>}
-                                </div>
+                                    {errors.cvc && <span>3 siffror</span>}
                             </div>
-                        </div>
                         
-                        <button type="submit" className="cta-button" onClick={alert("Hello! I am an alert box!!")}>Köp nu</button>
-                        </div>
+                        
+                        <button type="submit" className="cta-button">Köp nu</button>
+                        {/* onClick={alert("Hello! I am an alert box!!")} */}
+                        
                     </form>
                     {/* <input type="submit"/> */}
                    
